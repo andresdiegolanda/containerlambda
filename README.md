@@ -15,10 +15,15 @@ The example was taken from : https://towardsdatascience.com/building-aws-lambda-
 For using the container in a Lambda, it has to be deployed to an ECR registry:
 
 >docker push 974396178048.dkr.ecr.eu-west-1.amazonaws.com:myfirstimagepush
+
 >aws ecr get-login-password --region eu-west-1
+
 >aws ecr --region eu-west-1 | docker login -u AWS -p <token> 974396178048.dkr.ecr.eu-west-1.amazonaws.com/repo0
+  
 >docker images
+  
 >docker tag pythonlambdacontainer 974396178048.dkr.ecr.eu-west-1.amazonaws.com/repo0
+  
 >docker push 974396178048.dkr.ecr.eu-west-1.amazonaws.com/repo0
 
 The example was taken from https://www.freecodecamp.org/news/build-and-push-docker-images-to-aws-ecr/
