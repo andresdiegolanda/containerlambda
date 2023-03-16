@@ -16,7 +16,7 @@ For using the container in a Lambda, it has to be deployed to an ECR registry:
 
 >aws ecr get-login-password --region eu-west-1
 
->aws ecr --region eu-west-1 | docker login -u AWS -p <token> 974396178048.dkr.ecr.eu-west-1.amazonaws.com/repo0
+>aws ecr --region eu-west-1 | docker login -u AWS -p 'token' 974396178048.dkr.ecr.eu-west-1.amazonaws.com/repo0
   
 >docker images
   
